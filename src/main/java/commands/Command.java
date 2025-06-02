@@ -1,4 +1,4 @@
-package app.commands;
+package commands;
 
 import models.SpaceMarine;
 

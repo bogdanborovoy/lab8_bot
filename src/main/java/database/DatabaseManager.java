@@ -1,4 +1,4 @@
-package users;
+package database;
 
 import helpers.CollectionManager;
 import models.*;
@@ -43,8 +43,8 @@ public class DatabaseManager {
             throw new RuntimeException(e);
         }
     }
-    public HashMap<String, TreeSet<SpaceMarine>> getSpaceMarines() {
-        HashMap<String, TreeSet<SpaceMarine>> spaceMarines = new HashMap<>();
+    public HashMap<Long, TreeSet<SpaceMarine>> getSpaceMarines() {
+        HashMap<Long, TreeSet<SpaceMarine>> spaceMarines = new HashMap<>();
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM spacemarines");
@@ -62,7 +62,7 @@ public class DatabaseManager {
                 String chapterName = resultSet.getString("chapter_name");
                 Integer marinesCount = resultSet.getInt("marines_count");
                 Chapter chapter = new Chapter(chapterName, marinesCount);
-                String username = resultSet.getString("username");
+                Long username = Long.parseLong(resultSet.getString("username"));
                 SpaceMarine spaceMarine = new SpaceMarine(id, name, coordinates, creation_date, health, heartCount,  astartesCategory, meleeWeapon, chapter);
                 if (!spaceMarines.containsKey(username)) {
                     spaceMarines.put(username, new TreeSet<>(new CollectionManager.IDComparator()));

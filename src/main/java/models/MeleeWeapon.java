@@ -1,4 +1,4 @@
-package app.models;
+package models;
 
 /**
  * Перечисление типов ближнего оружия

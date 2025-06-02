@@ -1,4 +1,4 @@
-package app.commands;
+package commands;
 
 import helpers.CollectionManager;
 import models.SpaceMarine;

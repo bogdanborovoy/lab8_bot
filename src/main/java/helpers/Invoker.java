@@ -27,7 +27,7 @@ public class Invoker implements Serializable {
         this.setCommand("clear", new ClearCommand(receiver));
 //        invoker.setCommand("save", new SaveCommand(receiver));
         this.setCommand("execute_script", new ExecuteScriptCommand(receiver, this));
-        this.setCommand("exit", new ExitCommand(receiver));
+//        this.setCommand("exit", new ExitCommand(receiver));
         this.setCommand("add_if_max", new AddIfMaxCommand(receiver));
         this.setCommand("remove_greater", new RemoveGreaterCommand(receiver));
         this.setCommand("remove_lower", new RemoveLowerCommand(receiver));
@@ -35,6 +35,7 @@ public class Invoker implements Serializable {
         this.setCommand("filter_starts_with_name", new FilterStartsWithNameCommand(receiver));
         this.setCommand("print_field_ascending_health", new PrintFieldAscendingHealthCommand(receiver));
         this.setCommand("show_all_space_marines",new ShowAllSpaceMarinesCommand(receiver));
+//        this.setCommand("change_language", new ChangeLanguageCommand());
     }
     /**
      * Словарь команд, где ключ — название команды, а значение — сама команда.
