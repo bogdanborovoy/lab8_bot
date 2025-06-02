@@ -1,11 +1,12 @@
-//package app;
-//
-//import org.springframework.boot.autoconfigure.SpringBootApplication;
-//
-//@SpringBootApplication
-//public class SpaceMarinesBotApplication {
-//
-//    public static void main(String[] args) {
-//        org.springframework.boot.SpringApplication.run(SpaceMarinesBotApplication.class, args);
-//    }
-//}
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpaceMarinesBotApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpaceMarinesBotApplication.class, args);
+    }
+
+}
